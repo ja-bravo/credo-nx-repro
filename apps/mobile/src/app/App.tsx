@@ -11,6 +11,7 @@ import {
   Linking,
 } from 'react-native';
 import Svg, { G, Path } from 'react-native-svg';
+import { OpenId4VcVerificationSessionState } from '@credo-ts/openid4vc';
 
 export const App = () => {
   const [whatsNextYCoord, setWhatsNextYCoord] = useState<number>(0);
@@ -38,7 +39,8 @@ export const App = () => {
               testID="heading"
               role="heading"
             >
-              Welcome Mobile 👋
+              {/* Uncomment to crash the app */}
+              {/* {OpenId4VcVerificationSessionState.ResponseVerified} */}
             </Text>
           </View>
           <View style={styles.section}>
